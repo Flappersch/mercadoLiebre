@@ -25,5 +25,8 @@ app.get('/login', (req, res) => {
 
 /* Server */
 
-app.listen('3000', () => console.log ('Estamos corriente en el puerto 3000'));
+//app.listen('3000', () => console.log ('Estamos corriente en el puerto 3000'));
 
+
+// Para Heroku
+app.listen(process.env.PORT || 3000, () => console.log('Servidor corriendo en el puerto 3000'));
